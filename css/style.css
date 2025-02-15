@@ -1,0 +1,536 @@
+/* Basic css element */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* font families: */
+    --logo-font: Oswald;
+    --general-font: Poppins;
+
+    /* font colors: */
+    --font-light-color: #EEEEEE;
+    --font-green-color: #00ADB5;
+
+    /* font sizes  */
+    --general-font-size: 18px;      
+    --logo-font-size: 24px;         
+    --hero-title-font-size: 96px;    
+    --sec-title-font-size: 64px;    
+
+    /* background colors: */
+    --body-bg-color: #222831;
+    --btn-gray-color: #393E46;
+    --btn-green-color: #00ADB5;
+    --form-bg-color: rgba(45, 51, 59, .8);
+    --card-bg-color: rgba(44, 50, 59, .8);
+}
+
+body{
+    background-color: var(--body-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: var(--logo-font);
+    font-size: var(--logo-font-size);
+    color: var(--font-light-color);
+}
+
+h2{
+    color: var(--font-light-color);
+    font-family: var(--general-font);
+    font-size: var(--sec-title-font-size);
+    font-weight: 700;
+}
+
+span{
+    color: var(--font-green-color);
+}
+
+p{
+    color: var(--font-light-color);
+    font-family: var(--general-font);
+    font-size: var(--general-font-size);
+    font-weight: 400;
+}
+
+
+a{
+    color: var(--font-light-color);
+    font-family: var(--general-font);
+    font-size: var(--general-font-size);
+    font-weight: 400;
+}
+
+
+/* header css */
+header{
+    border-bottom: 1px solid var(--btn-gray-color);;
+}
+
+header .navbar .dropdown-menu {
+    right: 0%; 
+    left: auto;  
+    top: 130%;
+}
+
+header .navbar .dropdown-menu a{
+    padding: 10px 10px;
+    transition: 0.3s;
+}
+header .navbar .dropdown-menu a:hover{
+    background-color: var(--btn-green-color);
+    color: var(--font-light-color);
+}
+
+header .navbar .dropdown{
+    transition: 0.3s;
+}
+
+header .navbar .dropdown:hover{
+    color: var(--btn-green-color);
+}
+
+header .navbar ul a{
+    font-family: var(--general-font);
+    font-size: var(--general-font-size);
+    color: var(--font-light-color) !important;
+    transition: 0.3s;
+}
+header .navbar ul a:hover{
+    color: var(--font-green-color) !important;
+}
+
+header .dropdown button{
+    color: var(--font-light-color);
+}
+
+/* hero section */
+.hero-section .title h1{
+    color: var(--font-light-color);
+    font-family: var(--general-font);
+    font-size: var(--hero-title-font-size);
+    font-weight: 700;
+}
+
+.hero-section .title span{
+    color: var(--font-green-color);
+}
+
+.hero-section .hero-btn .hire-me{
+    background-color: var(--font-green-color);
+    color: var(--font-light-color);
+    font-family: var(--general-font);
+    font-size: var(--general-font-size);
+    transition: 0.3s;
+}
+
+.hero-section .hero-btn .hire-me:hover{
+    background-color: var(--font-light-color);
+    color: var(--font-green-color);
+    box-shadow: 1px 3px 10px rgba(0, 173, 181, 0.5);
+}
+
+.hero-section .hero-btn .dload-cv{
+    background-color: var(--btn-gray-color);
+    color: var(--font-light-color);
+    font-family: var(--general-font);
+    font-size: var(--general-font-size);
+    transition: 0.3s;
+    width: 200px !important;
+}
+
+.hero-section .dload-cv i{
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.hero-section .hero-btn .dload-cv:hover{
+    box-shadow: 1px 3px 10px rgba(0, 173, 181, 0.5);
+}
+
+.hero-section .hero-btn .dload-cv:hover i{
+    color: var(--font-green-color);
+}
+
+.hero-section .arrow-down{
+    background: var(--btn-gray-color);
+    color: var(--font-light-color);
+    transition: 0.3s;
+    width: 70px;
+    height: 70px;
+}
+
+.hero-section .arrow-down:hover{
+    background-color: var(--font-light-color);
+    color: var(--font-green-color);
+}
+
+.hero-section .hero-img{
+    position: relative;
+    width: 80%;
+    top: 5%;
+}
+
+/* about me section */
+main .about-me-section .row{
+    position: relative;
+    padding: 7% 0;
+}
+
+main .about-me-section .text-box{
+    position: relative;
+    margin-top: 15%;
+}
+
+main .about-me-section .img-box{
+    position: relative;
+    margin-top: 5%;
+}
+
+/* portfolio section */
+/* setting sepcial background */
+.portfolio-section {
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.portfolio-section .main-row{
+    position: relative;
+    margin: 3% 0% 5% 0%;
+}
+
+main .portfolio-section .text-box{
+    position: relative;
+    margin: 1% 0 0 3%;
+}
+
+.portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/portfolio-bg.png');
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.25; 
+    z-index: -1; 
+}
+
+.portfolio-section .row {
+    position: relative;
+    z-index: 1; 
+}
+
+.portfolio-section .btn-box .all{
+    width: 88px;
+    height: 50px;
+    background-color: var(--font-green-color);
+    color: var(--font-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-section .btn-box .design{
+    width: 174px;
+    height: 50px;
+    background-color: var(--btn-gray-color);
+    color: var(--font-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-section .btn-box .ui,
+.portfolio-section .btn-box .ux{
+    width: 88px;
+    height: 50px;
+    background-color: var(--btn-gray-color);
+    color: var(--font-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-section .card{
+    background-color: var(--card-bg-color);
+    transition: 0.3s;
+}
+
+.portfolio-section .card:hover{
+    background-color: var(--btn-gray-color);
+    transform: scale3d(1.08, 1.08, 1.08);
+}
+
+.portfolio-section .card .img1,
+.portfolio-section .card .img2,
+.portfolio-section .card .img3{
+    width: 5%;
+    height: 10%;
+}
+
+.portfolio-section .btn-box a{
+    transition: 0.3s;
+}
+
+.portfolio-section .btn-box a:hover{
+    background-color: var(--font-light-color);
+    color: var(--font-green-color);
+}
+
+/* contact section */
+main .contact-section .row{
+    position: relative;
+    margin: 5% 0% 0% 0% !important;
+}
+
+main .contact-section .text-box{
+    position: relative;
+    top: 7%;
+}
+
+.contact-section .img-box{
+    position: relative;
+    top: 10%;
+    width: 33%;
+}
+
+.contact-section .contact-img{
+    position: relative;
+}
+
+.contact-section .contact-box{
+    position: relative;
+    top: -10% !important;
+}
+
+.contact-section .contact-form{
+    font-family: var(--general-font);
+    color: var(--font-light-color);
+    font-size: var(--general-font-size);
+    font-weight: 700;
+    width: 95%;
+    height: min-content;
+    position: relative;
+}
+
+.contact-form .submit{
+    background-color: var(--btn-green-color);
+    margin-top: 24px;
+    color: var(--font-light-color);
+    transition: 0.3s;
+}
+
+.contact-form .submit i{
+    transition: 0.3s;
+}
+
+.contact-form .submit:hover{
+    background-color: var(--font-light-color);
+    color: var(--body-bg-color);
+}
+
+.contact-form .submit:hover i{
+    color: var(--btn-green-color);
+}
+
+.contact-form .form-control{
+    background-color: var(--form-bg-color);
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: var(--font-light-color) !important; 
+    font-family: var(--general-font);
+    font-size: var(--general-font-size);
+    font-weight: 700;
+    opacity: .5 !important;
+}
+
+.contact-form label, 
+.contact-form input, 
+.contact-form textarea{
+    border: none !important;
+    color: var(--font-light-color) !important;
+    font-family: var(--general-font) !important;
+    font-size: var(--general-font-size) !important;
+    font-weight: 400 !important;
+    margin-top: 10px;
+}
+
+.contact-form input{
+    margin-top: 10px;
+}
+
+.contact-form label{
+    margin-top: 24px;
+}
+
+/* footer section */
+footer{
+    border-top: 1px solid var(--btn-gray-color);
+}
+
+footer .page-link{
+    position: relative;
+    margin-top: 7%;
+}
+
+footer .f-span{
+    color: var(--font-light-color);
+}
+
+footer .page-link i, 
+footer .page-link .f-span{
+    color: var(--font-light-color);
+    transition: 0.3s;
+}
+
+footer .page-link a:hover .f-span,
+footer .page-link a:hover i{
+    color: var(--font-green-color);
+}
+
+footer .social-link{
+    position: relative;
+    margin-top:5%;
+}
+
+footer .social-link a{
+    color: var(--font-light-color);
+    background-color: var(--btn-gray-color);
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+footer .social-link a:hover{
+    background-color: var(--font-green-color);
+}
+
+@media(991px < width <1200px){
+    .hero-section .title-buttons-box{
+        position: relative;
+        top: -10%;
+    }
+    .hero-section .title h1{
+        font-size: 300%;
+    }
+
+    .hero-section .title-buttons-box .hero-btn{
+        position: relative;
+        top: 100%;
+    }
+
+}
+
+
+@media(width < 992px){
+
+    /* hero section */
+    .hero-section .title-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section .title p{
+        text-align: center;
+    }
+
+    .hero-section .title h1{
+        text-align: center;
+        font-size: 300%;
+    }
+
+    .hero-section .hero-btn{
+        justify-content: center;
+    }
+
+    .hero-section .hero-btn .hire-me,
+    .hero-section .hero-btn .dload-cv a{
+        font-size: 16px;
+    }
+
+    main .hero-section .hero-btn a{
+        padding: 2px 3px;
+        font-size: 16px;
+    }
+
+    .hero-section .header-img-section{
+        margin-top: 40px;
+    }
+
+    .hero-section .header-img-section .header-img{
+        width: 60%;
+    }
+
+    .hero-section .arrow-down{
+        position: relative;
+        margin-top: 20%;
+    }
+    
+    /* about me section */
+    main .about-me-section .row{
+        position: relative;
+        padding: 10% 0;
+        margin-bottom: 10%;
+    }
+
+    main .about-me-section .text-box{
+        position: relative;
+        margin-top: 15%;
+    }
+
+    main .about-me-section .text-box h2{
+        font-size: 50px;
+    }
+
+    main .about-me-section .img-box{
+        position: relative;
+        margin-top: 5%;
+    }
+
+    /* fortfolio section */
+    main .portfolio-section .text-box h2{
+        font-size: 50px;
+    }
+    
+    /* contact section */
+    main .contact-section .row{
+        position: relative;
+        margin: 5% 0% 0% 0% !important;
+    }
+
+    main .contact-section .text-box{
+        position: relative;
+        top: 7%;
+    }
+
+    .contact-section .text-box h2{
+        font-size: 50px;
+    }
+
+    .contact-section .img-box{
+        position: relative;
+        margin-top: 5%;
+        margin-left: 25%;
+        width: 33%;
+    }
+
+    .contact-section .contact-box{
+        position: relative;
+        top: 5% !important;
+    }
+}
